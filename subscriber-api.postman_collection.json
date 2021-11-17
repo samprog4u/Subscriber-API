@@ -1,0 +1,796 @@
+{
+	"variables": [],
+	"info": {
+		"name": "subscriber-api",
+		"_postman_id": "b7b78329-2bef-cedb-e629-3701ff1f0ff7",
+		"description": "Create a simple subscription platform(only RESTful APIs with MySQL) in which users can subscribe to a website (there can be multiple websites in the system). Whenever a new post is published on a particular website, all it's subscribers shall receive an email with the post title and description in it. (no authentication of any kind is required)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "task",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/v1/task",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "This is where user will subscribe to any websites"
+			},
+			"response": [
+				{
+					"id": "a0834d15-6e03-4976-8f1f-e5867978ea7d",
+					"name": "task-OK",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8000/api/v1/task",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 17 Nov 2021 07:26:20 GMT, Wed, 17 Nov 2021 07:26:20 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "127.0.0.1:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.4.22",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 507,
+					"body": "[\"message\",\"Welcome to subscriber API Endpoint\"]"
+				}
+			]
+		},
+		{
+			"name": "subscribe",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/v1/task/subscribe",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"tosprog4real@gmail.com\",\n\t\"website_id\": 1\n}"
+				},
+				"description": "This is where user will subscribe to any websites"
+			},
+			"response": [
+				{
+					"id": "c662ffd1-6628-48b0-b24c-8a207b3f6d8c",
+					"name": "subscribe-OK",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8000/api/v1/task/subscribe",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"samprog4u@gmail.com\",\n\t\"website_id\": 1\n}"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 16 Nov 2021 11:16:03 GMT, Tue, 16 Nov 2021 11:16:03 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "127.0.0.1:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.4.22",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 370,
+					"body": "{\"status\":true,\"message\":\"Great! You have successfully subscribe to our webiste\"}"
+				},
+				{
+					"id": "02b9696d-d8c5-43f1-b0eb-04ce343c35cb",
+					"name": "subscribe-422",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8000/api/v1/task/subscribe",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 16 Nov 2021 11:16:52 GMT, Tue, 16 Nov 2021 11:16:52 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "127.0.0.1:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.4.22",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 209,
+					"body": "{\"message\":\"The given data was invalid.\",\"errors\":{\"email\":[\"The email field is required.\"],\"website_id\":[\"The website id field is required.\"]}}"
+				},
+				{
+					"id": "94f615a0-4f1b-4a69-9129-8a278f77d347",
+					"name": "subscribe-400",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8000/api/v1/task/subscribe",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"samprog4u@gmail.com\",\n\t\"website_id\": 1\n}"
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 16 Nov 2021 11:18:09 GMT, Tue, 16 Nov 2021 11:18:09 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "127.0.0.1:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.4.22",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 243,
+					"body": "{\"status\":false,\"message\":\"Opps! You have already subscribe to this webiste\"}"
+				}
+			]
+		},
+		{
+			"name": "post",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/v1/task/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Laravel API\",\n    \"description\": \"This api creates a post for the subscribers\",\n    \"website_id\": \"1\"\n}"
+				},
+				"description": "This is where website owner can post to the websites"
+			},
+			"response": [
+				{
+					"id": "1df31f23-ad5e-4bcf-8709-5f4c3d7cbbf2",
+					"name": "post-OK",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8000/api/v1/task/post",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Laravel API\",\n    \"description\": \"This api creates a post for the subscribers\",\n    \"website_id\": \"1\"\n}"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 16 Nov 2021 11:32:49 GMT, Tue, 16 Nov 2021 11:32:49 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "127.0.0.1:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.4.22",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 299,
+					"body": "{\"status\":true,\"message\":\"Great! You have successfully post to this webiste\"}"
+				},
+				{
+					"id": "77e1e469-80f9-4449-a508-b60d30ae2977",
+					"name": "post-422",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8000/api/v1/task/post",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 16 Nov 2021 11:34:08 GMT, Tue, 16 Nov 2021 11:34:08 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "127.0.0.1:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.4.22",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 200,
+					"body": "{\"message\":\"The given data was invalid.\",\"errors\":{\"title\":[\"The title field is required.\"],\"description\":[\"The description field is required.\"],\"website_id\":[\"The website id field is required.\"]}}"
+				},
+				{
+					"id": "41bde418-a9c5-46c7-885e-6ccf616c8f79",
+					"name": "post-422",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8000/api/v1/task/post",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Laravel API\",\n    \"description\": \"This api creates a post for the subscribers\",\n    \"website_id\": \"1\"\n}"
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 16 Nov 2021 11:34:34 GMT, Tue, 16 Nov 2021 11:34:34 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "127.0.0.1:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.4.22",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 229,
+					"body": "{\"message\":\"The given data was invalid.\",\"errors\":{\"title\":[\"The title has already been taken.\"]}}"
+				}
+			]
+		},
+		{
+			"name": "websites",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/v1/task/websites",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "List of websites generated by laravel faker"
+			},
+			"response": [
+				{
+					"id": "10e8d367-20b9-4c66-b80c-ba9537e41bc4",
+					"name": "websites-OK",
+					"originalRequest": {
+						"url": "http://127.0.0.1:8000/api/v1/task/websites",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 17 Nov 2021 07:51:33 GMT, Wed, 17 Nov 2021 07:51:33 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "host",
+							"key": "host",
+							"value": "127.0.0.1:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "PHP/7.4.22",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 317,
+					"body": "{\"status\":true,\"data\":[{\"id\":1,\"name\":\"Harvey, Rodriguez and Donnelly\",\"url\":\"https:\\/\\/auer.com\\/quis-optio-facere-sit-ut-est.html\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":2,\"name\":\"Sauer Inc\",\"url\":\"https:\\/\\/www.maggio.com\\/sint-voluptatem-aut-aperiam-libero-odit-commodi\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":3,\"name\":\"Fay LLC\",\"url\":\"http:\\/\\/streich.com\\/voluptate-assumenda-autem-maxime-odit\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":4,\"name\":\"Hamill, Veum and Zemlak\",\"url\":\"http:\\/\\/www.larkin.net\\/\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":5,\"name\":\"Grant-Cronin\",\"url\":\"http:\\/\\/www.roob.biz\\/nam-aut-quisquam-tenetur-non-veniam-repellat-officiis-voluptatibus.html\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":6,\"name\":\"Collins-Champlin\",\"url\":\"http:\\/\\/www.heidenreich.com\\/cumque-id-et-suscipit-hic-ex-aspernatur-quasi\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":7,\"name\":\"Crooks Inc\",\"url\":\"http:\\/\\/dubuque.com\\/sint-illum-et-quasi-quia\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":8,\"name\":\"Heaney PLC\",\"url\":\"https:\\/\\/welch.org\\/et-voluptates-consequatur-aut-aliquam-dolores-dolores-sed.html\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":9,\"name\":\"Barrows-Bechtelar\",\"url\":\"http:\\/\\/sanford.net\\/recusandae-veritatis-soluta-cupiditate-nulla-ut-aperiam.html\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"},{\"id\":10,\"name\":\"Boyle-Robel\",\"url\":\"https:\\/\\/gleason.com\\/reprehenderit-magnam-doloremque-necessitatibus-sint.html\",\"created_at\":\"2021-11-16T09:18:29.000000Z\",\"updated_at\":\"2021-11-16T09:18:29.000000Z\"}],\"message\":\"List of all the available websites generated by Laravel faker\"}"
+				}
+			]
+		}
+	]
+}

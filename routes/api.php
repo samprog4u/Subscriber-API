@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\SubscriberController;
 use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\Api\WebsiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,5 @@ Route::group(array('prefix' => '/v1'), function () {
     });
     Route::post('/task/subscribe', [SubscriberController::class, 'store']);
     Route::post('/task/post', [PostController::class, 'store']);
+    Route::get('/task/websites', [WebsiteController::class, 'index']);
 });

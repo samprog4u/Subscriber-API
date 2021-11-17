@@ -4,6 +4,38 @@ Create a simple subscription platform(only RESTful APIs with MySQL) in which use
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
+## How to setup the application
+
+# Requirements
+
+- Composer
+- Apache Server (Wampserver/Xampp)
+- PHP 7.x
+- MYSQL 5.x
+
+# Cloning the repository and environment setup
+
+- Open your terminal
+- git clone https://github.com/samprog4u/Subscriber-API.git
+- Navigate to the cloned directory (cd Subscriber-API)
+- run "composer install" to install the laravel library and project dependencies
+- goto your mysql database and create a database with name of choice
+- In your root directory, open .env file and chenage the database settings to your own database settings
+- change the email settings to your own SMTP mail settings
+- In your terminal run "php artisan migrate" to migrate your database tables
+- thereafter, run "php artisan db:seed" to seed dummy data into your database tables
+- then run "php artisan serve" to make the application ready for use and you will see something like "Starting Laravel development server: http://127.0.0.1:8000"
+- Open your browser and enter the above url
+
+# Testing the application API endpoint
+
+- Open your postman to import the endpoint collections
+- locate postman api collection called "subscriber-api.postman_collection.json" in your root directory
+- Then you will find the endpoints and how to use them in the collection
+- DONE
+
+## Note: after you have tested subscriber and post endpoints then run "php artisan schedule:work" to execute all the queue jobs
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
